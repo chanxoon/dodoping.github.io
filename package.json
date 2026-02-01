@@ -6,11 +6,12 @@
     "start": "live-server src",
     "scss:watch": "sass --watch src/assets/scss:src/assets/css",
     "dev": "npm-run-all --parallel scss:watch start",
-    
     "clean": "rimraf dist",
     "scss:build": "sass src/assets/scss/style.scss dist/assets/css/style.css --style=compressed",
-    "copy:all": "copyfiles -u 1 \"src/**/*\" dist",
-    "build": "npm run clean && npm run copy:all && npm run scss:build",
+    "copy:html": "copyfiles -u 1 \"src/index.html\" dist",
+    "copy:include": "copyfiles -u 1 \"src/include/**/*\" dist/include",
+    "copy:assets": "copyfiles -u 2 \"src/assets/**/*\" dist/assets",
+    "build": "npm run clean && npm run copy:html && npm run copy:include && npm run copy:assets && npm run scss:build",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
