@@ -1,7 +1,7 @@
 {
-  "name": "github-pages-site",
+  "name": "portfolio",
   "version": "1.0.0",
-  "private": false,
+  "main": "index.js",
   "scripts": {
     "start": "live-server src",
     "scss:watch": "sass --watch src/assets/scss:src/assets/css",
