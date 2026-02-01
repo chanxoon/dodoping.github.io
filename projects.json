@@ -1,0 +1,68 @@
+{
+  "tabs": [
+    { "id": "all", "label": "All" },
+    { "id": "web", "label": "Web design" },
+    { "id": "mobile", "label": "Mobile design" },
+    { "id": "proposal", "label": "Proposal" },
+    { "id": "promotion", "label": "Promotion" },
+    { "id": "personal", "label": "Personal Project" }
+  ],
+  "projects": [
+    {
+      "type": "web",
+      "title": "메디컬 에스테틱 웹사이트 리뉴얼",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-web-01.png"
+    },
+    {
+      "type": "web", 
+      "title": "[KISA]디지털인증확산센터 구축",
+      "desc": "<span>Web</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-web-02.png"
+    }, 
+    {
+      "type": "web",
+      "title": "부산은행 KMS 고도화",
+      "desc": "<span>Web</span><span>advancement</span>",
+      "image": "./assets/img/projects/img-project-web-03.png"
+    }, 
+    {
+      "type": "web",
+      "title": "리즈마 웹사이트 구축",
+      "desc": "<span>Web</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-web-04.png"
+    }, 
+    {
+      "type": "web",
+      "title": "하나금융그룹 웹사이트 리뉴얼",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-web-05.png"
+    }, 
+
+
+
+
+    {
+      "type": "mobile",
+      "title": "T Membership 에이닷",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-mobile-01.png"
+    },
+
+
+
+
+    {
+      "type": "promotion",
+      "title": "Dr.G",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-promotion-01.png"
+    },
+    {
+      "type": "promotion",
+      "title": "볼보트럭 코리아",
+      "desc": "<span>Web</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-promotion-02.png"
+    }
+  ]
+}
