@@ -1,10 +1,6 @@
 let scrollY = 0;
 let wrap = null;
 
-/* ------------------------------
-   공통 유틸
---------------------------------*/
-
 // 스크린 높이 계산
 function syncHeight() {
     document.documentElement.style.setProperty(
@@ -55,15 +51,21 @@ function modalClose(el) {
     bodyUnlock();
 }
 
-// header scroll check
 function headerActiveCheck() {
-    const top = $(window).scrollTop();
-    $('#header').toggleClass('active', top >= 100);
-}
+    const TopVal = $(window).scrollTop();
+    const TopFixed1 = 100;
 
-/* ------------------------------
-   ⭐ include 완료 후 초기화
---------------------------------*/
+    if (TopFixed1 <= TopVal) {
+        $('#header').addClass('active');
+    } else {
+        $('#header').removeClass('active');
+    }
+}
+$(window).on('scroll', headerActiveCheck);
+// 새로고침
+$(document).ready(() => {
+    headerActiveCheck();
+});
 
 document.addEventListener('include:done', () => {
     console.log('✅ include 완료');
@@ -78,31 +80,6 @@ document.addEventListener('include:done', () => {
     // header scroll
     headerActiveCheck();
     $(window).on('scroll', headerActiveCheck);
-
-    // scroll down 버튼
-    $('.scrollBtn button').on('click', () => {
-        const $target = $('.introSec');
-        if (!$target.length) return;
-
-        const y =
-            $target.offset().top + $target.outerHeight();
-
-        $('html, body').stop().animate(
-            { scrollTop: y },
-            500
-        );
-    });
-
-    // 메뉴 버튼
-    $('.navBtn button').on('click', function () {
-        $(this).toggleClass('active');
-        $('#header').toggleClass('on');
-        $('.navListWrap').toggleClass('active');
-
-        $(this).hasClass('active')
-            ? bodyLock()
-            : bodyUnlock();
-    });
 
     // 최초 실행
     syncHeight();
