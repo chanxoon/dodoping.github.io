@@ -103,7 +103,7 @@
     let projectData = null;
 
     /* ===== JSON 불러오기 ===== */
-    fetch('./projects.json')
+    fetch('projects.json')
         .then(res => {
         if (!res.ok) throw new Error('JSON load failed');
         return res.json();
