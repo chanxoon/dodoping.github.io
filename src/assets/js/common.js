@@ -23,8 +23,8 @@ function bodyLock() {
 // body scroll unlock
 function bodyUnlock() {
     document.documentElement.classList.remove('is-locked');
-    window.scrollTo(0, scrollY);
     if (wrap) wrap.style.top = '';
+    window.scrollTo(0, scrollY);
 }
 
 // tab menu
@@ -160,7 +160,10 @@ document.addEventListener('include:done', () => {
 
         card.innerHTML = `
             <div class="thumb">
-            <img src="${project.image}" alt="${project.title}">
+                <img src="${project.image}" alt="${project.title}">
+                <div class="overlay">
+                    <span>VIEW</span>
+                </div>
             </div>
             <div class="project-info">
             <h3>${project.title}</h3>
@@ -171,6 +174,11 @@ document.addEventListener('include:done', () => {
         card.addEventListener('click', () => {
             modalImg.src = project.image;
             modal.classList.add('active');
+            bodyLock();
+
+            // 모달 컨텐츠 스크롤 최상단
+            const modalContent = modal.querySelector('.modal-content');
+            if (modalContent) modalContent.scrollTop = 0;
         });
 
         projectListEl.appendChild(card);
@@ -181,13 +189,32 @@ document.addEventListener('include:done', () => {
     /* ===== 모달 닫기 ===== */
     closeBtn.addEventListener('click', () => {
         modal.classList.remove('active');
+        bodyUnlock();
     });
 
     modal.addEventListener('click', e => {
-        if (e.target === modal) modal.classList.remove('active');
+        if (e.target === modal) {
+            e.stopPropagation();
+            modal.classList.remove('active');
+            bodyUnlock();
+        }
     });
-
 });
+
+// 동적 include 헤더도 적용되도록 이벤트 위임 사용
+$(document).on('click', '.navList a', function(e) {
+    e.preventDefault();
+
+    const targetClass = $(this).data('target');       // data-target에 클래스명 넣기
+    const $target = $('.' + targetClass);             // 클래스 선택
+    if (!$target.length) return;
+
+    const headerHeight = $('#header').outerHeight() || 0; // 헤더가 fixed이면 높이 고려
+    const offsetTop = $target.offset().top - headerHeight;
+
+    $('html, body').stop().animate({ scrollTop: offsetTop }, 500);
+});
+
 
 /* ------------------------------
    window 이벤트

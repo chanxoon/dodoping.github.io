@@ -21,7 +21,7 @@
         <div id="wrap">
             <div data-include="./include/_header.html"></div>
             <div id="container">
-                <section class="introSec">
+                <!-- <section class="introSec">
                     <h3 class="blind">소개 영역</h3>
                     <div class="inner">
                         <h2>
@@ -29,13 +29,15 @@
                             <p>EASY TO USE.</p>
                         </h2>
                     </div>
-                    <div class="scrollBtn">
-                        <button type="button"><span>Scroll</span></button>
-                    </div>
-                </section>
+                </section> -->
                 <section class="projectSec">
                     <h3 class="blind">프로젝트 영역</h3>
                     <div class="inner">
+                        <h4><img src="./assets/img/img-portfolio.png" alt="portfolio"></h4>
+                        <p>
+                            Designing Thoughtful Interfaces. Creating Better Experiences.<br/>
+                            Simple. Smart. User-Driven Digital Design.
+                        </p>
                         <div class="tabs" id="tabs"></div>
                         <div class="projects active" id="projectList"></div>
                     </div>
@@ -46,10 +48,10 @@
 
         <!-- Modal -->
         <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close" id="close">X</span>
-            <img id="modalImg" src="" alt="프로젝트 상세 이미지" />
-        </div>
+            <div class="modal-content">
+                <img id="modalImg" src="" alt="프로젝트 상세 이미지" />
+            </div>
+            <button type="button" class="close" id="close">X</button>
         </div>
     </body>
 </html>
