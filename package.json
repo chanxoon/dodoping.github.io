@@ -12,8 +12,7 @@
     "copy:include": "copyfiles -u 2 \"src/include/**/*\" dist/include",
     "copy:assets": "copyfiles -u 2 \"src/assets/**/*\" dist/assets",
     "copy:projects": "copyfiles -u 1 \"src/projects.json\" dist",
-    "build": "npm run clean && npm run copy:html && npm run copy:include && npm run copy:assets && npm run copy:projects && npm run scss:build",
-    "deploy": "npm run build && gh-pages -d dist"
+    "build": "npm run clean && npm run copy:html && npm run copy:include && npm run copy:assets && npm run copy:projects && npm run scss:build"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
