@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     targets.forEach(el => {
         fetch(el.dataset.include)
-            .then(res => res.text())
+            .then(res => {
+                if (!res.ok) throw new Error(`Failed to load ${el.dataset.include}`);
+                return res.text();
+            })
             .then(html => {
                 el.innerHTML = html;
                 count++;
@@ -12,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (count === targets.length) {
                     document.dispatchEvent(new Event('include:done'));
                 }
+            })
+            .catch(err => {
+                console.error(err);
             });
     });
 });
