@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+        <meta http-equiv="X-UA-compatible" content="IE=edge" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/lib/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/lib/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/lib/aos.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+        <script src="./assets/js/lib/jquery-3.6.0.min.js"></script>
+        <script src="./assets/js/lib/jquery-ui.min.js"></script>
+        <script src="./assets/js/lib/swiper.min.js"></script>
+        <script src="./assets/js/lib/aos.js"></script>
+        <script src="./assets/js/include.js"></script>
+        <script src="./assets/js/common.js"></script>
+        <title>PORTFOLIO</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <div data-include="./include/_header.html"></div>
+            <div id="container">
+                <!-- <section class="introSec">
+                    <h3 class="blind">소개 영역</h3>
+                    <div class="inner">
+                        <h2>
+                            <p>EASY TO SEE,</p>
+                            <p>EASY TO USE.</p>
+                        </h2>
+                    </div>
+                </section> -->
+                <section class="projectSec">
+                    <h3 class="blind">프로젝트 영역</h3>
+                    <div class="inner">
+                        <h4><img src="./assets/img/img-portfolio.png" alt="portfolio"></h4>
+                        <p>
+                            Designing Thoughtful Interfaces. Creating Better Experiences.<br/>
+                            Simple. Smart. User-Driven Digital Design.
+                        </p>
+                        <div class="tabs" id="tabs"></div>
+                        <div class="projects active" id="projectList"></div>
+                    </div>
+                </section>
+            </div>
+            <div data-include="./include/_footer.html"></div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <img id="modalImg" src="" alt="프로젝트 상세 이미지" />
+            </div>
+            <button type="button" class="close" id="close">X</button>
+        </div>
+    </body>
+</html>
