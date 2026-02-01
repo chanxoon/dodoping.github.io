@@ -1,0 +1,35 @@
+{
+  "tabs": [
+    { "id": "all", "label": "All" },
+    { "id": "web", "label": "Web" },
+    { "id": "app", "label": "App" },
+    { "id": "landing", "label": "Landing" },
+    { "id": "branding", "label": "Branding" }
+  ],
+  "projects": [
+    {
+      "type": "web",
+      "title": "Corporate Website",
+      "desc": "기업 공식 웹사이트 리디자인",
+      "image": "./assets/img/icon/ico-more.png"
+    },
+    {
+      "type": "app",
+      "title": "Finance App UI",
+      "desc": "핀테크 모바일 앱 UI/UX",
+      "image": "https://via.placeholder.com/1200x800?text=App+01"
+    },
+    {
+      "type": "landing",
+      "title": "Promotion Landing",
+      "desc": "이벤트 랜딩 페이지 디자인",
+      "image": "https://via.placeholder.com/1200x800?text=Landing+01"
+    },
+    {
+      "type": "branding",
+      "title": "Brand Identity",
+      "desc": "브랜드 아이덴티티 디자인",
+      "image": "https://via.placeholder.com/1200x800?text=Branding+01"
+    }
+  ]
+}
