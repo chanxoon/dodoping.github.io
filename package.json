@@ -2,16 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "scripts": {
-    "start": "live-server .",
+    "start": "live-server . --watch=index.html,assets,projects.json",
     "scss:watch": "sass --watch assets/scss:assets/css",
     "dev": "npm-run-all --parallel scss:watch start",
-
     "scss:build": "sass assets/scss/style.scss dist/assets/css/style.css --style=compressed",
-    
     "copy:html": "copyfiles -u 0 index.html dist",
     "copy:assets": "copyfiles -u 1 assets/**/* dist/assets",
     "copy:json": "copyfiles -u 0 projects.json dist",
-
     "build": "rimraf dist && npm run copy:html && npm run copy:assets && npm run copy:json && npm run scss:build"
   },
   "devDependencies": {

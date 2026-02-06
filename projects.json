@@ -1,6 +1,5 @@
 {
   "tabs": [
-    { "id": "all", "label": "All" },
     { "id": "web", "label": "Web design" },
     { "id": "mobile", "label": "Mobile design" },
     { "id": "proposal", "label": "Proposal" },
@@ -51,6 +50,52 @@
 
 
 
+ 
+    {
+      "type": "proposal",
+      "title": "[효성]ITX드림시스템 KMS 리뉴얼",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-proposal-01.png"
+    },
+    {
+      "type": "proposal",
+      "title": "[영진약품주식회사] 웹사이트 리뉴얼",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-proposal-02.png"
+    },
+    {
+      "type": "proposal",
+      "title": "[씨메스] 웹사이트 리뉴얼",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-proposal-03.png"
+    },
+    {
+      "type": "proposal",
+      "title": "[KISA] 전자서명 통합지원포털 고도화",
+      "desc": "<span>Web</span><span>advancement</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-proposal-04.png"
+    },
+    {
+      "type": "proposal",
+      "title": "[상상인증권] 웹사이트 리뉴얼",
+      "desc": "<span>Web</span><span>Renewal</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-proposal-05.png"
+    },
+    {
+      "type": "proposal",
+      "title": "[IBK] 카드 플랫폼 구축 리뉴얼",
+      "desc": "<span>App</span><span>Renewal</span>",
+      "image": "./assets/img/projects/img-project-proposal-06.png"
+    },
+    {
+      "type": "proposal",
+      "title": "[농협] KMS 녹취시스템 구축",
+      "desc": "<span>Web</span><span>Responsive</span>",
+      "image": "./assets/img/projects/img-project-proposal-07.png"
+    },
+
+
+
 
     {
       "type": "promotion",
@@ -63,6 +108,29 @@
       "title": "볼보트럭 코리아",
       "desc": "<span>Web</span><span>Responsive</span>",
       "image": "./assets/img/projects/img-project-promotion-02.png"
+    },
+
+
+
+    {
+      "type": "personal",
+      "title": "[자체 프로젝트] 예절을 알려주는 ‘눈치 코치’ 예절인 앱",
+      "desc": "<span>APP</span><span>planning</span><span>personal project</span>",
+      "images": [
+        "./assets/img/projects/img-project-personal-01.png",
+        "./assets/img/projects/img-project-personal-01-2.png",
+        "./assets/img/projects/img-project-personal-01-3.png"
+      ]
+    },
+    {
+      "type": "personal",
+      "title": "[킨텍스] 전시·컨벤션 모바일 앱 리디자인",
+      "desc": "<span>Web</span><span>planning</span><span>personal project</span>",
+      "images": [
+        "./assets/img/projects/img-project-personal-02.png",
+        "./assets/img/projects/img-project-personal-02-2.png",
+        "./assets/img/projects/img-project-personal-02-3.png"
+      ]
     }
   ]
 }
